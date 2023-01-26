@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-body">
+      <h1>Agregar articulo al catalogo</h1>
+      <form class="row" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarArticulo()">
+        <div class="col">
+          <input class="form-control"
+            type="text" name="categoria" id="categoria" placeholder="categoria"
+            [(ngModel)]="categoria" required
+          />
+          <input class="form-control"
+            type="text" name="nombre" id="nombre" placeholder="Nombre"
+            [(ngModel)]="nombre" required
+          />
+          <input class="form-control"
+            type="number" name="precio" id="precio" placeholder="precio"
+            [(ngModel)]="precio" required
+          />
+          <input class="form-control"
+            type="text" name="codigoArticulo" id="codigoArticulo" placeholder="codigoArticulo"
+            [(ngModel)]="codigoArticulo" required
+          />
+        </div>
+        <div class="col">
+          <input class="form-control"
+            type="text" name="descripcion" id="descripcion" placeholder="descripcion"
+            [(ngModel)]="descripcion" required
+          />
+          <input class="form-control"
+            type="date" name="fechaRegitro" id="fechaRegitro"
+            [(ngModel)]="fechaRegitro" required
+          />
+          <input class="form-control"
+            type="text" name="marca" id="marca" placeholder="marca"
+            [(ngModel)]="marca" required
+          />
+          <input class="form-control"
+            type="text" name="modelo" id="modelo" placeholder="modelo"
+            [(ngModel)]="modelo" required
+          />
+        </div>
+          <button class="btn btn-primary" type="submit" style="cursor: pointer">+</button>
+          <!--button *ngIf="index != null" type="submit" style="cursor: pointer" 
+          class="buttonRed" (click)="eliminarPersona()">-</button-->
+      </form>
+  </div>
+  <router-outlet></router-outlet>

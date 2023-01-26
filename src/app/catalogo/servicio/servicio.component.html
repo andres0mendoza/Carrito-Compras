@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-body">
+        <h1>Agregar servicio al catalogo</h1>
+        <form class="row" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarServicio()">
+            <div class="col">
+                <input class="form-control"
+                    type="text" name="categoria" id="categoria" placeholder="categoria"
+                    [(ngModel)]="categoria" required
+                />
+                <input class="form-control"
+                    type="number" name="precio" id="precio" placeholder="precio"
+                    [(ngModel)]="precio" required
+                />
+                <input class="form-control"
+                    type="text" name="codigoArticulo" id="codigoArticulo" placeholder="codigoArticulo"
+                    [(ngModel)]="codigoArticulo" required
+                />
+                <input class="form-control"
+                    type="text" name="unidadMedida" id="unidadMedida" placeholder="unidadMedida"
+                    [(ngModel)]="unidadMedida" required
+                />
+            </div>
+            <div class="col">
+                <input class="form-control"
+                    type="text" name="nombre" id="nombre" placeholder="Nombre"
+                    [(ngModel)]="nombre" required
+                />
+                <input class="form-control"
+                    type="text" name="descripcion" id="descripcion" placeholder="descripcion"
+                    [(ngModel)]="descripcion" required
+                />
+                <input class="form-control"
+                    type="text" name="frecuencia" id="frecuencia" placeholder="frecuencia"
+                    [(ngModel)]="frecuencia" required
+                />
+                <input class="form-control"
+                    type="date" name="fechaRegitro" id="fechaRegitro"
+                    [(ngModel)]="fechaRegitro" required
+                />
+            </div>
+                
+            <button class="btn btn-primary" type="submit" style="cursor: pointer">Guardar servicio</button>
+            
+        </form> 
+    </div>
+</div>    
+<router-outlet></router-outlet>
