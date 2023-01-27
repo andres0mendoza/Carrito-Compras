@@ -5,13 +5,16 @@ import { ServicioComponent } from './catalogo/servicio/servicio.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { DetalleComponent } from './detalle/detalle.component';
+import { PermisoGuard } from './permiso.guard';
 
 const routes: Routes = [
   { path:'', component: InicioComponent},
   { path:'articulo', component: ArticuloComponent},
   { path:'servicio', component: ServicioComponent},
   { path:'catalogo', component: CatalogoComponent},
-  { path:'carrito', component: CarritoComponent}
+  { path:'carrito', component: CarritoComponent},
+  { path:'detalle', component: DetalleComponent, canActivate: [PermisoGuard]}
 ];
 
 @NgModule({

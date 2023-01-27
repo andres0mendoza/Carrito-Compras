@@ -15,13 +15,7 @@ export class CatalogoComponent implements OnInit {
   ngOnInit(): void {
     this.articuloService.obtenerArticulos()
     .subscribe(
-      (articulos: Articulo[]=[]) => {
-        this.articulos = articulos;
-        this.articuloService.setArticulos(articulos);
-        console.log(this.articulos)
-      }
-    );
-    
+      (articulos: Articulo[]=[]) => { this.articulos = articulos; }
+    );    
   }
-
 }

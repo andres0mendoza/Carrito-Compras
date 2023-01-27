@@ -1,1 +1,9 @@
-<p>carrito works!</p>
+<div *ngFor="let articuloItem of articulos; let indice = index">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">{{ articuloItem.nombre }}</h6>
+            <p class="card-text">{{ articuloItem.descripcion }}</p>
+            <a class="btn btn-warning" href="/detalle">Ver detalles</a>
+        </div>
+    </div>
+</div>

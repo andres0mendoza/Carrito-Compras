@@ -6,19 +6,13 @@ import { Servicio } from '../models/servicio.model';
 @Injectable()
 export class ServicioService{
 
-    servicio: Servicio[]  = [
-        //new Articulo("1", 0, "123", "s", "ws", new Date())
-    ];
+    servicio: Servicio[]  = [];
 
     constructor(private dataServices: DataServices){}
 
     setServicios(servicio: Servicio[]){
         this.servicio = servicio;
     }
-
-    /*obtenerPersonas() : Observable<Servicio[]>{
-        return this.dataServices.cargarServicio();
-      }*/ 
 
     agregarServicio(servicio: Servicio){
         console.log("Entro a agregarServicio")
@@ -29,7 +23,6 @@ export class ServicioService{
     eliminarServicio(index: number){
         this.servicio.splice(index, 1);
         this.dataServices.eliminarArticulo(index);
-        //se vuelve a guardar el arreglo parar regenerar los indices
         this.modificarServicio();
       }
 

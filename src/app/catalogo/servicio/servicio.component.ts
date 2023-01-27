@@ -27,13 +27,6 @@ export class ServicioComponent implements OnInit {
       this. codigoArticulo, this.descripcion, this.fechaRegitro, this.unidadMedida, this.frecuencia);  
       
       this.servicioService.agregarServicio(servicio)
-
-  /*  if(this.modoEdicion != null && this.modoEdicion === 1){
-      this.personasService.modificarPersona(this.index, persona1)
-    }else{
-      this.personasService.agregarPersona(persona1);
-    }*/
-    //this.router.navigate(['personas'])
   }
 
 }

@@ -1,9 +1,15 @@
 <div class="box">
     <app-tarjeta
-    *ngFor="let articulo of articulos; let i = index"
+    *ngFor="let articuloItem of articulos; let i = index"
     [indice]="i"
-    [nombre]="articulo.nombre"
-    [descripcion]="articulo.descripcion"
+    [categoria]="articuloItem.categoria"
+    [nombre]="articuloItem.nombre"
+    [precio]="articuloItem.precio"
+    [codigoArticulo]="articuloItem.codigoArticulo"
+    [descripcion]="articuloItem.descripcion"
+    [fechaRegitro]="articuloItem.fechaRegitro"
+    [marca]="articuloItem.marca"
+    [modelo]="articuloItem.modelo"
     >
     </app-tarjeta>
 </div>

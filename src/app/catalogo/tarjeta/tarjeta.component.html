@@ -3,7 +3,7 @@
         <h5 class="card-title">{{ indice }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ nombre }}</h6>
         <p class="card-text">{{ descripcion }}</p>
-        <button class="btn btn-primary">Agregar al carrito</button>
+        <button class="btn btn-primary" (click)="agregarCarrito()">Agregar al carrito</button>
         <button class="btn btn-danger" (click)="eliminarArticulo()">Eliminar</button>
     </div>
 </div>
