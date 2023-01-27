@@ -10,19 +10,18 @@ import { ArticuloService } from './services/articulo.service';
 })
 export class PermisoGuard implements CanActivate {
 
-  constructor(private articuloService: ArticuloService, private dataServices: DataServices) { }
+  constructor(private articuloService: ArticuloService) { }
 
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if(this.carritoTieneArticulo()){    
       return true;
     }else{
-      alert("nop")
       return false;
     }
     
   }
 
-  carritoTieneArticulo() : boolean {
+/*  carritoTieneArticulo() : boolean {
     let respuesta: boolean = false
     this.dataServices.cosultarDetalle(0).subscribe(
       (data) => {
@@ -30,7 +29,11 @@ export class PermisoGuard implements CanActivate {
       }
     )
     return respuesta;
-  }
+  } */
+
+  carritoTieneArticulo() : boolean {
+    return this.articuloService.permitirAccesos()
+  } 
 
 
 }

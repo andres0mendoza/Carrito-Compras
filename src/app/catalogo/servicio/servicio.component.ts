@@ -25,7 +25,6 @@ export class ServicioComponent implements OnInit {
   onGuardarServicio(){
     let servicio = new Servicio(this.categoria, this.nombre, this.precio,
       this. codigoArticulo, this.descripcion, this.fechaRegitro, this.unidadMedida, this.frecuencia);  
-      
       this.servicioService.agregarServicio(servicio)
   }
 

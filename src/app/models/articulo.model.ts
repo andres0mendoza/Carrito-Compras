@@ -14,8 +14,4 @@ export class Articulo extends Catalogo {
         this.marca = marca;
         this.modelo = modelo;
     }
-
-
-
-
 }

@@ -14,8 +14,4 @@ export class Servicio extends Catalogo {
         this.unidadMedida = unidadMedida;
         this.frecuencia = frecuencia;
     }
-
-
-
-
 }

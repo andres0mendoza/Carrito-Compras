@@ -41,7 +41,7 @@ export class ArticuloService{
   }
 
   permitirAccesos(){
-    let respuesta: boolean = false
+    let respuesta: boolean = true
     this.dataServices.cosultarDetalle(0).subscribe(
       (data) => {
         respuesta = data != null ? true : false;
